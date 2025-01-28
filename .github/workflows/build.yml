@@ -1,5 +1,5 @@
 name: build
-on: [push]
+on: [workflow_dispatch]
 jobs:
   build:
     runs-on: windows-latest
@@ -17,7 +17,7 @@ jobs:
         run: |
           mkdir -p skiasharp && cd skiasharp
           git init && git remote add origin https://github.com/mono/SkiaSharp.git
-          git fetch --depth 1 origin release/2.88.6
+          git fetch --depth 1 origin release/3.118.0-preview.1
           git checkout --recurse-submodules -q FETCH_HEAD
           git submodule update --init --depth 1
 
