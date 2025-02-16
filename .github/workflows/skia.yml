@@ -62,7 +62,7 @@ jobs:
           cd skiasharp/native/windows/libHarfBuzzSharp/bin/x64/Release
           7z a -y -mx9 libHarfBuzzSharp.7z ./libHarfBuzzSharp.lib
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: libSkiaSharp
           path: out/windows/x64/libSkiaSharp.7z
